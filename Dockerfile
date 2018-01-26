@@ -21,7 +21,9 @@ RUN unzip /vm/buildAgent.zip -d /vm/buildAgent/ && \
      touch /vm/env && \
      echo "" >> /vm/buildAgent/conf/buildAgent.dist.properties && \
      echo "system.bsd=true" >> /vm/buildAgent/conf/buildAgent.dist.properties && \
-     echo "system.os=FREEBSD" >> /vm/buildAgent/conf/buildAgent.dist.properties
+     echo "system.os=FREEBSD" >> /vm/buildAgent/conf/buildAgent.dist.properties && \
+     echo "system.agent_name=freebsd" >> /opt/buildagent/conf/buildAgent.dist.properties  && \
+     echo "system.agent_repo=https://github.com/jeandet/teamcity-docker-agent-freebsd" >> /opt/buildagent/conf/buildAgent.dist.properties
 
 
 # Define working directory.
