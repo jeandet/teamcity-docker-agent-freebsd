@@ -1,14 +1,12 @@
 # Pull base image.
-FROM fedora
+FROM jeandet/teamcity-docker-vm-base-agent
 MAINTAINER Alexis Jeandet "alexis.jeandet@member.fsf.org"
-
-# Install.
-RUN dnf install -y http://download.virtualbox.org/virtualbox/5.1.28/VirtualBox-5.1-5.1.28_117968_fedora25-1.x86_64.rpm unzip xonsh vagrant
 
 # Add files.
 RUN mkdir -p /vm/buildAgent
 ADD start_vm.xsh /vm/
 ADD start.sh /vm/
+ADD update_agent.sh /vm/
 ADD tc.sh /vm/
 ADD bootstrap.sh /vm/
 ADD Vagrantfile /vm/
