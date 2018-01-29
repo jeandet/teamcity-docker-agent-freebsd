@@ -6,6 +6,10 @@ then
   /usr/local/bin/bash /home/vagrant/env
   /usr/local/bin/bash /home/vagrant/tc.sh
 else
- echo "not provisioned yet"
+  echo "starting teamcity for first time update"
+  /usr/local/bin/bash /home/vagrant/env
+  /usr/local/bin/bash /home/vagrant/tc.sh &
+  sleep 300
+  /usr/local/bin/bash /home/vagrant/buildAgent/bin/agent.sh stop
 fi
 

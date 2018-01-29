@@ -6,7 +6,6 @@ MAINTAINER Alexis Jeandet "alexis.jeandet@member.fsf.org"
 RUN mkdir -p /vm/buildAgent
 ADD start_vm.xsh /vm/
 ADD start.sh /vm/
-ADD update_agent.sh /vm/
 ADD tc.sh /vm/
 ADD bootstrap.sh /vm/
 ADD Vagrantfile /vm/

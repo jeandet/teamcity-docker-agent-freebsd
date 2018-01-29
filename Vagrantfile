@@ -75,5 +75,4 @@ Vagrant.configure("2") do |config|
   config.vm.provision "file", source: "/vm/env", destination: "$HOME/env", run: "always"
   config.vm.provision :shell, path: "start.sh", run: "always"
   config.vm.provision "shell", inline: "touch /provisioned"
-  config.vm.provision :shell, path: "update_agent.sh"
 end
